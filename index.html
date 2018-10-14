@@ -2,9 +2,10 @@
 <html>
 
 <head>
+ <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="quotestyle.css">
-    <link href='https://fonts.googleapis.com/css?family=Cinzel Decorative' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Cormorant SC' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Cormorant' rel='stylesheet'>
 </head>
 
 <body>
@@ -18,7 +19,7 @@
         var text = '{"book":"Ordspråksboken","chapter":"15","verse":"14","body":"En klok man söker kunskap, dåren ägnar sig åt dumt prat."}';
         var obj = JSON.parse(text);
         document.getElementById("quote_body").innerHTML =
-            "\"" + obj.body + "\"";
+            "\“" + obj.body + "\”";
         document.getElementById("quote_footer").innerHTML =
             obj.book + " " + obj.chapter + ":" + obj.verse;
     </script>

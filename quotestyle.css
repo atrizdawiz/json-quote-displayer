@@ -1,9 +1,11 @@
+@charset "UTF-8";
+
 body {
-	font-family: 'Cinzel'; font-size: 20px;
+	font-family: 'Cormorant'; font-size: 20px;
 	
 }
 footer {
-	font-family: 'Cinzel Decorative';font-size: 15px;
+	font-family: 'Cormorant SC';font-size: 15px;
 	font-style: bold;
 	float: right;
 }
@@ -14,10 +16,9 @@ footer {
 	border: 2px solid #000;
 	text-align: justify;
 	margin-top: 300px;
+	padding-bottom: 1em;
 }
-.quote_body{
-	
-}
-blockquote {
-	margin-bottom: 3em;
+
+#quote_body {
+	margin-bottom: 0px;
 }
