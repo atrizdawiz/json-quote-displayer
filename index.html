@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="quotestyle.css">
+    <link href='https://fonts.googleapis.com/css?family=Cinzel Decorative' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet'>
+</head>
+
 <body>
-<div class="container">
-<blockquote id="quote">
-<p id="quote_body"></p>
-<footer id="quote_footer"></footer>
-</blockquote>
-</div>
-<script>
-var text = '{"book":"Ordspråksboken","chapter":"15","verse":"14","body":"En klok man söker kunskap, dåren ägnar sig åt dumt prat."}';
-var obj = JSON.parse(text);
-document.getElementById("quote_footer").innerHTML =
-obj.book + " " + obj.chapter +":"+ obj.verse;
-document.getElementById("quote_body").innerHTML =
-obj.body;
-</script>
+    <div class="container">
+        <blockquote>
+            <p id="quote_body"></p>
+            <footer id="quote_footer"></footer>
+        </blockquote>
+    </div>
+    <script>
+        var text = '{"book":"Ordspråksboken","chapter":"15","verse":"14","body":"En klok man söker kunskap, dåren ägnar sig åt dumt prat."}';
+        var obj = JSON.parse(text);
+        document.getElementById("quote_body").innerHTML =
+            "\"" + obj.body + "\"";
+        document.getElementById("quote_footer").innerHTML =
+            obj.book + " " + obj.chapter + ":" + obj.verse;
+    </script>
 </body>
+
 </html>
