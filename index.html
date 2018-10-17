@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-
+    
 <head>
- <meta charset="utf-8">
+    <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="quotestyle.css">
     <link href='https://fonts.googleapis.com/css?family=Cormorant SC' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Cormorant' rel='stylesheet'>
@@ -16,13 +16,18 @@
         </blockquote>
     </div>
     <script>
-        var text = '{"book":"Ordspråksboken","chapter":"15","verse":"14","body":"En klok man söker kunskap, dåren ägnar sig åt dumt prat."}';
-        var obj = JSON.parse(text);
-        document.getElementById("quote_body").innerHTML =
-            "\“" + obj.body + "\”";
-        document.getElementById("quote_footer").innerHTML =
-            obj.book + " " + obj.chapter + ":" + obj.verse;
-    </script>
+        var yourUrl = "https://api.myjson.com/bins/vcj6o";
+        function Get(yourUrl) {
+            var Httpreq = new XMLHttpRequest(); // a new request
+            Httpreq.open("GET", yourUrl, false);
+            Httpreq.send(null);
+            return Httpreq.responseText;
+            }
+            var obj = JSON.parse(Get(yourUrl));
+            document.getElementById("quote_body").innerHTML =
+                "\“" + obj.body + "\”";
+            document.getElementById("quote_footer").innerHTML =
+                obj.book + " " + obj.chapter + ":" + obj.verse;
+        </script>
 </body>
-
 </html>
