@@ -1,7 +1,5 @@
 json-quote-displayer
 =======
-Make beautiful prints of json formated quotes, possibly with animation in the future.
-
 The aim is to present quotes in a beautiful way from a URL pointing to a Json file.
 
 ## Usage 
@@ -10,3 +8,6 @@ The aim is to present quotes in a beautiful way from a URL pointing to a Json fi
 2. Upload your json file to a web server that supports fetching JSON through javascript (the easiest way is to use http://myjson.com/).
 3. Edit the index.html file and change the variable `yourUrl` to your own.
 4. Sit back and enjoy the pleasant rendering of your quote.
+
+## Showcase
+For a live version see: www.andreasostling.se/bibelcitat
