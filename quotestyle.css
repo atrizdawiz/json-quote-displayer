@@ -13,12 +13,20 @@ footer {
 .container {
 	max-width: 400px;
 	margin: auto;
-	border: 2px solid #000;
 	text-align: justify;
-	margin-top: 200px;
-	padding-bottom: 1em;
+	margin-top: 100px;
+	padding-bottom: 1.5em;
+	color: rgba(0, 0, 0, 1);
+	animation: text_animation;
+	animation-duration: 8s;
 }
 
 #quote_body {
 	margin-bottom: 0px;
 }
+
+@keyframes text_animation {
+    from {color: rgba(0, 0, 0, 0.0);}
+    to {color: rgba(0, 0, 0, 1.0);}
+}
+

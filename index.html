@@ -16,16 +16,18 @@
         </blockquote>
     </div>
     <script>
-        var yourUrl = "https://api.myjson.com/bins/vcj6o";
+        var yourUrl = "https://api.myjson.com/bins/1d2oy8";
+       
         fetch(yourUrl)
             .then(function(response) {
                 return response.json();
             })
             .then(function(obj) {
+                var x = Math.floor(Math.random() * obj.length);
                 document.getElementById("quote_body").innerHTML =
-                    "\“" + obj.body + "\”";
+                    "\“" + obj[x].body + "\”";
                 document.getElementById("quote_footer").innerHTML =
-                    obj.book + " " + obj.chapter + ":" + obj.verse;
+                    obj[x].book + " " + obj[x].chapter + ":" + obj[x].verse;
             });
     </script>
 </body>
